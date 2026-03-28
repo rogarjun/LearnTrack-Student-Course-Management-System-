@@ -14,7 +14,6 @@ public class Student extends Person{
         this.active = active;
     }
 
-    //Demonstrate constructor overloading in at least one class (e.g., Student with and without email)
     public Student(int id, String firstName, String lastName, String batch, boolean active) {
         super.id = id;
         super.firstName = firstName;
