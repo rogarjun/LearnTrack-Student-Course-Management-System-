@@ -1,39 +1,82 @@
-## Project Description
-This project is a console-based Student Course Management System developed using Java.
+# Student Course Enrollment Management System
 
-The application allows users to manage students, courses, and enrollments efficiently. It provides full CRUD (Create, Read, Update, Delete) operations for both students and courses, along with enrollment management functionality.
+## Overview
+This is a console-based Java application built using Object-Oriented Programming principles to manage:
 
-### Key features include:
+- Students
+- Courses
+- Enrollments
 
-Add, update, delete, and list students
-Add, update, delete, and list courses
-Enroll students into courses
-View enrollments by student
-Mark enrollments as completed or cancelled
-Input validation and exception handling for reliability
-The project follows a layered architecture:
+The system allows users to add and manage students and courses, enroll students into courses, view enrollments, and update enrollment status.
 
-UI Layer: Handles user interaction (Main class)
-Service Layer: Contains business logic (StudentService, CourseService, EnrollmentService)
-Entity Layer: Defines data models (Student, Course, Enrollment)
-Utility Layer: Provides helper functions such as validation, ID generation, and exception handling
-How to Compile and Run
-Using Command Line
-Navigate to the project root directory:
-cd your-project-folder
-Compile all Java files:
-javac UI/*.java Service/*.java Entity/*.java Util/*.java Exception/*.java
-### Run the application:
-java UI.Main
-Using IntelliJ IDEA
-Open the project in IntelliJ IDEA
-Locate the Main class inside the UI package
-Right-click on Main.java and select "Run 'Main.main()'"
-Output
-After running the program, a menu-driven interface will be displayed, allowing the user to perform various operations such as managing students, courses, and enrollments.
+---
 
-### Notes
-Ensure that JDK is properly installed and configured
-Follow the correct package structure while compiling
-IDs are generated automatically by the system
-It is recommended to view available students and courses before performing enrollment operations
+## Features
+
+### Student Management
+- Add student
+- List students
+- Update student
+- Remove student
+
+### Course Management
+- Add course
+- List courses
+- Update course
+- Remove course
+
+### Enrollment Management
+- Enroll a student in a course
+- View enrollments for a student
+- Mark enrollment as completed
+- Mark enrollment as cancelled
+
+### Validation and Exception Handling
+- Handles invalid menu choices
+- Handles invalid numeric input
+- Throws custom exception when a student, course, or enrollment is not found
+- Uses input validation before processing user data
+
+---
+
+## Tech Stack
+- Java
+- OOP
+- Collections (`ArrayList`)
+- Exception Handling
+- Console-based UI
+
+---
+
+## Project Structure
+
+```text
+src
+├── Entity
+│   ├── Person.java
+│   ├── Student.java
+│   ├── Course.java
+│   └── Enrollment.java
+│
+├── Service
+│   ├── StudentService.java
+│   ├── CourseService.java
+│   └── EnrollmentService.java
+│
+├── Util
+│   ├── InputValidator.java
+│   ├── ExceptionHandler.java
+│   └── IdGenerator.java
+│
+├── Exception
+│   └── EntityNotFoundException.java
+│
+└── UI
+    └── Main.java
+```
+
+---
+
+## Class Diagram
+
+![](src/Docs/class-diagram.png)
